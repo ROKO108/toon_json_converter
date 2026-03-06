@@ -6,11 +6,16 @@ on:
   pull_request:
     branches: [main, master, develop]
 
+# Permisos necesarios para el workflow llamado
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  statuses: write
+
 jobs:
   ci:
     uses: ROKO108/.github/.github/workflows/universal-ci.yml@main
-    # ── Opciones personalizables por repo ──────────────────
     with:
-      validate_all: false        # true = analiza todo, false = solo cambios
-      # disable_linters: "SPELL" # descomenta para desactivar linters concretos
-    secrets: inherit             # pasa el GITHUB_TOKEN automáticamente
+      validate_all: false
+    secrets: inherit
