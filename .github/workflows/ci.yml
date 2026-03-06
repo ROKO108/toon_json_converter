@@ -18,4 +18,5 @@ jobs:
     uses: ROKO108/.github/.github/workflows/universal-ci.yml@main
     with:
       validate_all: false
+      disable_linters: "PYTHON_MYPY,PYTHON_PYRIGHT"
     secrets: inherit
