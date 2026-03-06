@@ -8,7 +8,7 @@ on:
 
 jobs:
   ci:
-    uses: ROKO108/.github/.github/workflows/universal-ci.yml@main
+    uses: ROKO108/.github/workflows/universal-ci.yml@main
     # ── Opciones personalizables por repo ──────────────────
     with:
       validate_all: false        # true = analiza todo, false = solo cambios
