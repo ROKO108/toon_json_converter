@@ -27,7 +27,7 @@ from typing import Any, NamedTuple, Optional, Tuple
 class ArrayInfo(NamedTuple):
     """Information about array header in TOON format."""
 
- length: int
+    length: int
     delimiter: str
     fields: Optional[list[str]]
 
