@@ -3,6 +3,8 @@
 Bidirectional TOON ↔ JSON/JSONL converter
 Combines json_to_toon and toon_to_json functionality
 Automatically detects conversion direction based on file extension
+
+Tested with Python 3.8+ (uses dataclasses and type hints)
 """
 import json
 import sys
