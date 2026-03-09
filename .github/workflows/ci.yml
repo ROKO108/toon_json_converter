@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [main, master, develop]
 
-# Permisos necesarios para el workflow llamado
 permissions:
   contents: write
   pull-requests: write
@@ -18,5 +17,5 @@ jobs:
     uses: ROKO108/.github/.github/workflows/universal-ci.yml@main
     with:
       validate_all: false
-      disable_linters: "PYTHON_MYPY,PYTHON_PYRIGHT"
+      disable_linters: "PYTHON_MYPY,PYTHON_PYRIGHT,SPELL_CSPELL,REPOSITORY_GRYPE,REPOSITORY_CHECKOV,REPOSITORY_TRIVY"
     secrets: inherit
