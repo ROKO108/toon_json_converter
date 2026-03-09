@@ -4,10 +4,14 @@ Bidirectional TOON ↔ JSON/JSONL converter
 Combines json_to_toon and toon_to_json functionality
 Automatically detects conversion direction based on file extension
 
-Works with .json, .jsonl, and .toon files:
-    - .json → .toon
-    - .jsonl → .toon (each line is a separate JSON object)
-    - .toon → .json (outputs a single JSON object)
+Tested with Python 3.8+ (uses dataclasses and type hints)
+
+Usage:
+  # Convert JSON to TOON
+  python toon_json_converter.py input.json output.toon
+
+  # Convert TOON to JSON
+  python toon_json_converter.py input.toon output.json
 """
 import json
 import sys
