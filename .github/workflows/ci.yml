@@ -1,0 +1,21 @@
+name: 🛡️ CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  statuses: write
+
+jobs:
+  ci:
+    uses: ROKO108/.github/.github/workflows/universal-ci.yml@main
+    with:
+      validate_all: false
+      disable_linters: "PYTHON_MYPY,PYTHON_PYRIGHT,SPELL_CSPELL,REPOSITORY_GRYPE,REPOSITORY_CHECKOV,REPOSITORY_TRIVY"
+    secrets: inherit
